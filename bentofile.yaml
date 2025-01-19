@@ -1,0 +1,19 @@
+service: src.service:gbr_service
+description: "Predict the chance of admission of a student in a university"
+labels:
+  owner: "DataScientest"
+  project: "admissions"
+
+include:    
+  - data/
+  - src/
+  - tests/
+
+python:
+  packages:
+    - bentoml
+    - pandas  
+    - scikit-learn
+    - pyjwt
+    - pytest
+    - requests
